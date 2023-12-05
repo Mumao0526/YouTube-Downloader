@@ -20,7 +20,7 @@ pip install pytube
 - `--format`: Select '.mp4' or '.mp3', it's default '.mp4'.
 - `--output_path`: Specifies the path where you want to save files.
 
-### Example
+## Example
 
 ```bash
 # If you want to save a video
@@ -35,3 +35,7 @@ python downloader.py --link "https://youtu.be/yAOU9Yi40EQ?si=6Y9eCGAl9ikMFPzu" -
 # If you want to save a video from playlist
 python downloader.py --link "https://youtube.com/playlist?list=PLM1j2JqVBQflDBzTRe35HAuJRON-WgnN7&si=R7At42KJaVQg2JCG"
 ```
+
+### Disclaimer
+
+This script is intended for personal use and educational purposes only. Please ensure you have the right to download content from YouTube.
