@@ -54,10 +54,10 @@ def run(link: str, format: str = ".mp4", output_path: str = "."):
 def parse_opt():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser()
-    parser.add_argument("--link", type=str, required=True, help="Youtube link")
+    parser.add_argument("--link", type=str, required=True, help="Youtube video link")
     parser.add_argument("--format", default=".mp4", help=".mp4 or .mp3")
     parser.add_argument(
-        "--output_path", default=".", help="Where you want to store the file"
+        "--output_path", default=".", help="Specifies the path where you want to save files."
     )
     return parser.parse_args()
 
