@@ -7,9 +7,11 @@ ssl._create_default_https_context = ssl._create_stdlib_context
 
 
 def onProgress(stream, chunk, remains):
-    total = stream.filesize  # 取得完整尺寸
-    percent = (total - remains) / total * 100  # 減去剩餘尺寸 ( 剩餘尺寸會抓取存取的檔案大小 )
-    print(f"下載中… {percent:05.2f}", end="\r")  # 顯示進度，\r 表示不換行，在同一行更新
+    total = stream.filesize  # get full-size
+    # subtract the remaining size (the remaining size will capture the accessed file size)
+    percent = (total - remains) / total * 100
+    # show progress, \r means no line break, update on the same line
+    print(f"下載中… {percent:05.2f}", end="\r")  
 
 
 def toMp3(path: str, output_path: str = "."):
