@@ -8,7 +8,7 @@ Clone the repository, and install the library.
 
 ```bash
 # Clone this downloader 
-git clone https://github.com/Mumao0526/Youtube-Dowloader.git
+git clone https://github.com/Mumao0526/YouTube-Downloader.git
 
 # install pytube
 pip install pytube
@@ -18,8 +18,7 @@ pip install pytube
 
 - `--link`: Specifies the link to the video from YouTube you want to download.
 - `--format`: Select '.mp4' or '.mp3', it's default '.mp4'.
-- `--output_path`: Specifies the path to the video you want to save.
-
+- `--output_path`: Specifies the path where you want to save files.
 
 ### Example
 
