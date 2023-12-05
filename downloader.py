@@ -11,13 +11,13 @@ def onProgress(stream, chunk, remains):
     # subtract the remaining size (the remaining size will capture the accessed file size)
     percent = (total - remains) / total * 100
     # show progress, \r means no line break, update on the same line
-    print(f"下載中… {percent:05.2f}", end="\r")  
+    print(f"Downloading… {percent:05.2f}", end="\r")  
 
 
 def toMp3(path: str, output_path: str = "."):
     yt = YouTube(path, on_progress_callback=onProgress)
 
-    print(yt.title + "\tdownload...")
+    print(yt.title + "\tdownload start")
     # get audio and save to .mp3
     yt.streams.filter().get_audio_only().download(
         filename=yt.title + ".mp3", output_path=output_path
@@ -29,7 +29,7 @@ def toMp3(path: str, output_path: str = "."):
 def toMp4(path: str, output_path: str = "."):
     yt = YouTube(path, on_progress_callback=onProgress)
 
-    print(yt.title + "\tdownload...")
+    print(yt.title + "\tdownload start")
     # get HIGHEST resolution video and save to .mp4
     yt.streams.filter().get_highest_resolution().download(
         filename=yt.title + ".mp4", output_path=output_path
